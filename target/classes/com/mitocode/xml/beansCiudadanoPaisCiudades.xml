@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc 
+		http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/tx 
+		http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="ciudadano" class="com.mitocode.beans2.Ciudadano" name="ciudadanoBean2">
+		<property name="id" value="1"></property>
+		<property name="nombre" value="Jaime"></property>
+		<property name="apodo" value="Mitocode"></property>
+		<property name="pais" ref="pais"></property>
+	</bean>
+
+	<bean id="pais" class="com.mitocode.beans2.Pais">
+		<property name="nombre" value="Perú"></property>
+		<property name="ciudades">
+			<list>
+				<ref bean="ciudad1"/>
+				<ref bean="ciudad2"/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="ciudad1" class="com.mitocode.beans2.Ciudad">
+		<property name="nombre" value="Lima"></property>
+	</bean>
+
+	<bean id="ciudad2" class="com.mitocode.beans2.Ciudad">
+		<property name="nombre" value="Piura"></property>
+	</bean>
+	
+	<alias name="ciudadano" alias="ciudadanoBean"/>
+	
+</beans>
