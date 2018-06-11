@@ -32,8 +32,8 @@ public class App6_con_Ciudadano_Pais_XML {
 //		
 //		((ConfigurableApplicationContext)appContext).close();
 		
-		/********* Caso 4 ************/
-
+//		/********* Caso 4 ************/
+//
 //		ApplicationContext appContext = new ClassPathXmlApplicationContext("com/mitocode/xml/beansCiudadanoPais4.xml");
 //		Ciudadano c = (Ciudadano) appContext.getBean("ciudadanoBean");
 //		System.out.println(c.toString());
@@ -42,11 +42,11 @@ public class App6_con_Ciudadano_Pais_XML {
 		
 		/********* Caso 5 ************/
 
-//		ApplicationContext appContext = new ClassPathXmlApplicationContext("com/mitocode/xml/beansCiudadanoPais5.xml");
-//		Ciudadano c = (Ciudadano) appContext.getBean("ciudadanoBean2");
-//		System.out.println(c.toString());
+//		ApplicationContext appContext2 = new ClassPathXmlApplicationContext("com/mitocode/xml/beansCiudadanoPais5.xml");
+//		Ciudadano c2 = (Ciudadano) appContext2.getBean("ciudadanoBean2");
+//		System.out.println(c2.toString());
 //		
-//		((ConfigurableApplicationContext)appContext).close();			
+//		((ConfigurableApplicationContext)appContext2).close();			
 		
 	}
 }

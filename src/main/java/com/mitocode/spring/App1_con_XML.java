@@ -18,6 +18,22 @@ public class App1_con_XML {
 		
 		System.out.println(m.getSaludo());
 		
+		
+		/******************************************************/
+		
+//		//Para ver las diferencias entre SINGLETON y PROTOTYPE
+//		System.out.println(m.getSaludo());
+//		System.out.println(m);
+//		
+		Mundo m2 = (Mundo) appContext.getBean("mundo");
+		System.out.println(m2.getSaludo());
+//		System.out.println(m2);
+//		
+////		m2.setSaludo("Adios!!");
+////		System.out.println("Saludo de m: " + m.getSaludo());
+////		System.out.println("Saludo de m2: " + m2.getSaludo());
+		
+		
 		((ConfigurableApplicationContext)appContext).close();
 	}
 

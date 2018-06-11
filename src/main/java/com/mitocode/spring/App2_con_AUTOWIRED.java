@@ -3,11 +3,12 @@ package com.mitocode.spring;
 import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Component;
 
 import com.mitocode.beans.Fruta;
+import com.mitocode.beans.Manzana;
 
 @Component
 public class App2_con_AUTOWIRED {
@@ -15,6 +16,7 @@ public class App2_con_AUTOWIRED {
 	//Forma 1: Con inyeccion en el constructor
 	@Autowired
 	public App2_con_AUTOWIRED(Fruta man) {
+//	public App2_con_AUTOWIRED(@Qualifier("manzana") Fruta man) {
 		
 		System.out.println("Constructor de App2_con_AUTOWIRED con AUTOWIRED: ");
 		man.saludo();
@@ -29,6 +31,7 @@ public class App2_con_AUTOWIRED {
 //	}
 //
 //	@Autowired
+////	@Qualifier("manzana")
 //	public void setMan(Fruta man) {
 //		this.man = man;
 //		System.out.println("Inyectada fruta en el setter:");
@@ -38,6 +41,7 @@ public class App2_con_AUTOWIRED {
 	
 //	//Forma 3: De igual manera, se puede usar un metodo "PostConstruct"
 //	@Autowired
+////	@Qualifier("pera")
 //	Fruta man;
 //	
 //	@PostConstruct
@@ -52,7 +56,11 @@ public class App2_con_AUTOWIRED {
 		
 		AnnotationConfigApplicationContext  appContext = new AnnotationConfigApplicationContext();
 		appContext.scan("com.mitocode");
-		appContext.refresh();	
+		appContext.refresh();
+		
+//		System.out.println();
+//		Manzana m = (Manzana)appContext.getBean("manzana");
+//		System.out.println(m);
 		
 		appContext.close();
 	}		

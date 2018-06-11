@@ -10,6 +10,7 @@ public class Mundo {
 	
 	@Value("Hola Mundo2!!!") //Usamos esto con la clase "App2_con_JAVACONFIG" 
 	
+	/*****************************************/
 	
 	public String saludo;   
 

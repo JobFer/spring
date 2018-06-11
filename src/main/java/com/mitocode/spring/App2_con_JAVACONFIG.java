@@ -13,7 +13,8 @@ public class App2_con_JAVACONFIG {
 	public static void main(String[] args) {
 		
 //		//Forma 1: Esta línea es para usar Spring con anotaciones
-//		ApplicationContext appContext = new AnnotationConfigApplicationContext(AppConfig.class, AppConfig2.class);
+//		ApplicationContext appContext = 
+//				new AnnotationConfigApplicationContext(AppConfig.class, AppConfig2.class);
 
 //		//Forma 2: La linea anterior es lo mismo que estas 4 lineas:
 		AnnotationConfigApplicationContext appContext = new AnnotationConfigApplicationContext();
@@ -32,6 +33,9 @@ public class App2_con_JAVACONFIG {
 
 		System.out.println("1 "+m.getSaludo());
 		System.out.println("2 "+m2.getSaludo());
+		
+//		m2.setSaludo("Hola Marte!!");
+//		System.out.println("2 "+m2.getSaludo());
 		
 		((ConfigurableApplicationContext)appContext).close();		
 		
